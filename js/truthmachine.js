@@ -223,7 +223,7 @@ TruthMachine.prototype.compute = function(values)
 
 TruthMachine.prototype._run_tree = function(node, values)
 {
-    var op    = node[0];
+	var op    = node[0];
     var left  = node[1];
     var right = (node.length > 2 ? node[2] : null);
 
@@ -251,6 +251,12 @@ TruthMachine.prototype._run_tree = function(node, values)
             return (left === right);
         case 'NEG':
             return ! left;
+        case 'NAND':
+            return !( left && right );
+        case 'NOR':
+            return !(left || right);
+        case 'XOR':
+            return ((left||right) && !(left&&right));
         default:
             throw "Unknown operator: '" + op + "'";
     }

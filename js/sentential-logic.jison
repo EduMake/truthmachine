@@ -5,11 +5,14 @@
 
 %%
 \s+                   { /* skip whitespace */ }
-"."|"•"|"*"           { return 'CON';   }
-"v"|"∨"|"+"           { return 'DIS';   }
+"NAND"			      { return 'NAND';   }
+"NOR"      			  { return 'NOR';   }
+"XOR"                 { return 'XOR';   }
+"."|"•"|"*"|"AND"     { return 'CON';   }
+"v"|"∨"|"+"|"OR"      { return 'DIS';   }
 ">"|"⊃"               { return 'IMP';   }
 "="|"≡"               { return 'EQV';   }
-"~"|"!"               { return 'NEG';   }
+"~"|"!"|"NOT"         { return 'NEG';   }
 "TRUE"|"FALSE"        { return 'CONST'; }
 [a-zA-Z]              { return 'VAR';   }
 "("|"{"|"["           { return '(';     }
@@ -20,7 +23,7 @@
 
 /* operator associations and precedence */
 
-%left  'CON' 'DIS' 'IMP' 'EQV'
+%left  'CON' 'DIS' 'IMP' 'EQV' 'NAND' 'NOR' 'XOR'
 %left  'CONST' 'VAR'
 %right 'NEG'
 
@@ -52,6 +55,9 @@ binaryconnector
     | DIS { $$ = 'DIS'; }
     | IMP { $$ = 'IMP'; }
     | EQV { $$ = 'EQV'; }
+    | NAND { $$ = 'NAND'; }
+    | NOR { $$ = 'NOR'; }
+    | XOR { $$ = 'XOR'; }
     ;
 
 unaryconnector
