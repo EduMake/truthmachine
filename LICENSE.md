@@ -1,4 +1,5 @@
 Copyright (c) 2013, Shahar Evron
+2016, Martyn Eggleton (text logic operators)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
