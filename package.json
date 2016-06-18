@@ -1,0 +1,26 @@
+{
+  "name": "truthmachine",
+  "version": "1.0.1",
+  "description": "Browser-based Sentential Logic Calculator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduMake/truthmachine.git"
+  },
+  "keywords": [
+    "Browser",
+    "Sentential",
+    "Boolean",
+    "Logic",
+    "Calculator"
+  ],
+  "author": "Shahar Evron, Martyn Eggleton",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/EduMake/truthmachine/issues"
+  },
+  "homepage": "https://github.com/EduMake/truthmachine#readme"
+}
