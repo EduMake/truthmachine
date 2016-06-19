@@ -4,6 +4,9 @@
  * @constructor
  */
 var TruthMachine = function(sentence) {
+	if(sentence.length == 1){
+		sentence = "!!"+sentence;
+	}
     this._tree = [];
     this._vars = [];
     this._sentence = null;
